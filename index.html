@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Website</title>
 
-<title>E-Commerce UI Project</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 
 <style>
 
@@ -15,197 +13,335 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
     background:#e3e6e6;
 }
 
-/* NAVBAR */
+a{
+    text-decoration:none;
+}
 
 .navbar{
-    height:60px;
+    height:70px;
     background:#131921;
     color:white;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
-    padding:0 10px;
+    padding:0 15px;
 }
 
 .logo{
-    font-size:28px;
-    font-weight:bold;
     color:#ff9900;
+    font-size:30px;
+    font-weight:bold;
 }
 
 .border{
     border:1px solid transparent;
-    padding:5px;
+    padding:8px;
+    cursor:pointer;
 }
 
 .border:hover{
     border:1px solid white;
-    cursor:pointer;
 }
 
-.address1{
-    color:#ccc;
+.add-first{
+    color:#cccccc;
     font-size:12px;
 }
 
-.address2{
+.add-second{
     font-size:14px;
     font-weight:bold;
 }
 
-.search{
-    display:flex;
-    width:50%;
-    height:40px;
-    border-radius:5px;
-    overflow:hidden;
-}
-
-.search select{
-    width:55px;
-    border:none;
-    background:#f3f3f3;
-}
-
-.search input{
-    width:100%;
-    border:none;
-    padding-left:10px;
-    font-size:15px;
-}
-
-.search button{
-    width:50px;
-    border:none;
-    background:#febd69;
-    font-size:18px;
-}
-
-.nav-text small{
-    font-size:12px;
-}
-
-.nav-text p{
-    font-size:14px;
-    font-weight:bold;
-}
-
-.cart{
+.add-icon{
     display:flex;
     align-items:center;
     gap:5px;
+}
+
+.nav-search{
+    display:flex;
+    width:50%;
+    height:42px;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.search-select{
+    width:60px;
+    border:none;
+    background:#f3f3f3;
+    text-align:center;
+}
+
+.search-input{
+    width:100%;
+    border:none;
+    padding-left:10px;
+    font-size:16px;
+}
+
+.search-icon{
+    width:50px;
+    background:#febd69;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+    font-size:20px;
+}
+
+.nav-second{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.nav-cart{
+    font-size:16px;
     font-weight:bold;
 }
 
-.cart i{
+.nav-cart i{
     font-size:28px;
 }
 
-/* PANEL */
-
 .panel{
-    height:40px;
+    height:45px;
     background:#232f3e;
     color:white;
     display:flex;
     align-items:center;
-    gap:20px;
-    padding-left:20px;
-    font-size:14px;
+    justify-content:space-between;
+    padding:0 20px;
 }
 
-/* HERO */
+.panel-ops{
+    width:70%;
+    font-size:15px;
+}
 
-.hero{
-    height:350px;
-    background:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop');
+.panel-ops p{
+    display:inline;
+    margin-left:15px;
+    cursor:pointer;
+}
+
+.panel-deals{
+    font-weight:bold;
+}
+
+.hero-section{
+    background:url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1400&auto=format&fit=crop');
+    height:400px;
     background-size:cover;
-    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
 }
 
-/* PRODUCTS */
+.hero-msg{
+    background:white;
+    color:black;
+    padding:15px;
+    width:90%;
+    margin-bottom:30px;
+    text-align:center;
+    border-radius:8px;
+    font-size:15px;
+}
 
-.products{
+.hero-msg a{
+    color:#007185;
+}
+
+.shop-section{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
     padding:25px;
 }
 
 .box{
     background:white;
-    padding:20px;
-    border-radius:10px;
+    border-radius:12px;
+    overflow:hidden;
     transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .box:hover{
     transform:translateY(-5px);
 }
 
-.box h2{
+.box-content{
+    padding:20px;
+}
+
+.box-content h2{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.box-img{
+    height:260px;
+    background-size:cover;
+    background-position:center;
+    border-radius:10px;
+}
+
+.box-content p{
+    margin-top:15px;
+}
+
+.box-content p a{
+    color:#007185;
+    font-weight:bold;
+}
+
+.scroll-section{
+    grid-column:1/-1;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    overflow:hidden;
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.feed-section{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.feed-section::-webkit-scrollbar{
+    height:8px;
+}
+
+.feed-section::-webkit-scrollbar-thumb{
+    background:#999;
+    border-radius:10px;
+}
+
+.item img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+footer{
+    margin-top:30px;
+}
+
+.foot-panel1{
+    background:#37475a;
+    color:white;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.foot-panel1 a{
+    color:white;
+    font-weight:bold;
+}
+
+.foot-panel2{
+    background:#232f3e;
+    color:white;
+    display:flex;
+    justify-content:space-evenly;
+    padding:40px 20px;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.foot-panel2 ul{
+    display:flex;
+    flex-direction:column;
+}
+
+.foot-panel2 p{
+    font-size:18px;
+    font-weight:bold;
     margin-bottom:15px;
 }
 
-.box img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-.price{
-    color:#b12704;
-    font-size:20px;
-    margin:10px 0;
-    font-weight:bold;
-}
-
-.btn{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:30px;
-    background:#ffd814;
-    font-weight:bold;
+.foot-panel2 a{
+    color:#dddddd;
+    margin-bottom:10px;
+    font-size:14px;
     cursor:pointer;
 }
 
-.btn:hover{
-    background:#f7ca00;
+.foot-panel3{
+    background:#131921;
+    border-top:1px solid #3a4553;
+    height:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ff9900;
+    font-size:30px;
+    font-weight:bold;
 }
 
-/* FOOTER */
-
-.footer{
-    background:#131921;
+.foot-panel4{
+    background:#0f1111;
     color:white;
     text-align:center;
     padding:20px;
-    margin-top:20px;
+}
+
+.pages a{
+    margin:0 10px;
+    font-size:13px;
+}
+
+.copyright{
+    margin-top:10px;
+    font-size:13px;
 }
 
 @media(max-width:768px){
 
-    .search{
-        width:40%;
+    .navbar{
+        flex-wrap:wrap;
+        height:auto;
+        gap:10px;
+        padding:15px;
     }
 
-    .nav-text{
-        display:none;
+    .nav-search{
+        width:100%;
     }
 
     .panel{
-        overflow:auto;
-        white-space:nowrap;
+        flex-direction:column;
+        height:auto;
+        gap:10px;
+        padding:15px;
     }
+
+    .panel-ops{
+        width:100%;
+    }
+
+    .hero-section{
+        height:250px;
+    }
+
 }
 
 </style>
@@ -213,44 +349,45 @@ body{
 
 <body>
 
+<header>
+
 <div class="navbar">
 
-    <div class="logo">ShopKart</div>
+    <div class="logo border">
+        E-Commerce_Website
+    </div>
 
-    <div class="border">
-        <div class="address1">Deliver to</div>
-        <div class="address2">
+    <div class="nav-address border">
+        <p class="add-first">Deliver to</p>
+        <div class="add-icon">
             <i class="fa-solid fa-location-dot"></i>
-            India
+            <p class="add-second">India</p>
         </div>
     </div>
 
-    <div class="search">
-
-        <select>
+    <div class="nav-search">
+        <select class="search-select">
             <option>All</option>
         </select>
 
-        <input type="text"
-        placeholder="Search products">
+        <input type="text" placeholder="Search Products" class="search-input">
 
-        <button>
+        <div class="search-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-
+        </div>
     </div>
 
-    <div class="nav-text border">
-        <small>Hello, Sign in</small>
-        <p>Account</p>
+    <div class="border">
+        <p>Hello, Sign in</p>
+        <p class="nav-second">Account & Lists</p>
     </div>
 
-    <div class="nav-text border">
-        <small>Returns</small>
-        <p>Orders</p>
+    <div class="border">
+        <p>Returns</p>
+        <p class="nav-second">& Orders</p>
     </div>
 
-    <div class="cart border">
+    <div class="nav-cart border">
         <i class="fa-solid fa-cart-shopping"></i>
         Cart
     </div>
@@ -258,63 +395,194 @@ body{
 </div>
 
 <div class="panel">
-    <p><i class="fa-solid fa-bars"></i> Menu</p>
-    <p>Today's Deals</p>
-    <p>Electronics</p>
-    <p>Fashion</p>
-    <p>Mobiles</p>
-    <p>Books</p>
-</div>
 
-<div class="hero"></div>
-
-<div class="products">
-
-    <div class="box">
-        <h2>Headphones</h2>
-
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="price">₹1,999</div>
-
-        <button class="btn">Add to Cart</button>
+    <div class="panel-all">
+        <i class="fa-solid fa-bars"></i>
+        All
     </div>
 
-    <div class="box">
-        <h2>Smart Watch</h2>
-
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="price">₹2,499</div>
-
-        <button class="btn">Add to Cart</button>
+    <div class="panel-ops">
+        <p>Today's Deals</p>
+        <p>Registry</p>
+        <p>Prime Video</p>
+        <p>Gift Cards</p>
+        <p>Customer Service</p>
+        <p>Sell</p>
     </div>
 
-    <div class="box">
-        <h2>Shoes</h2>
-
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="price">₹3,299</div>
-
-        <button class="btn">Add to Cart</button>
-    </div>
-
-    <div class="box">
-        <h2>Laptop</h2>
-
-        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="price">₹59,999</div>
-
-        <button class="btn">Add to Cart</button>
+    <div class="panel-deals">
+        Shop Deals In Electronics
     </div>
 
 </div>
 
-<div class="footer">
-    <p>© 2026 ShopKart | Designed by Shailesh Bhil</p>
+</header>
+
+<div class="hero-section">
+
+    <div class="hero-msg">
+        You are on E-Commerce_Website. Explore millions of products with fast delivery and exciting offers.
+    </div>
+
 </div>
+
+<div class="shop-section">
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Gaming Setup</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Fashion Collection</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Toys Collection</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Modern Chairs</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Best Laptops</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Smart Watches</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Hard Disk</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1591799265444-d66432b91588?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-content">
+            <h2>Play Station</h2>
+            <div class="box-img" style="background-image:url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=800&auto=format&fit=crop');"></div>
+            <p><a href="#">See More</a></p>
+        </div>
+    </div>
+
+    <div class="scroll-section">
+
+        <div class="section-title">
+            <h2>Top Picks For India</h2>
+        </div>
+
+        <div class="feed-section">
+
+            <div class="item"><img src="https://picsum.photos/300?1"></div>
+            <div class="item"><img src="https://picsum.photos/300?2"></div>
+            <div class="item"><img src="https://picsum.photos/300?3"></div>
+            <div class="item"><img src="https://picsum.photos/300?4"></div>
+            <div class="item"><img src="https://picsum.photos/300?5"></div>
+            <div class="item"><img src="https://picsum.photos/300?6"></div>
+            <div class="item"><img src="https://picsum.photos/300?7"></div>
+            <div class="item"><img src="https://picsum.photos/300?8"></div>
+            <div class="item"><img src="https://picsum.photos/300?9"></div>
+            <div class="item"><img src="https://picsum.photos/300?10"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot-panel1">
+        <a href="#">Back To Top</a>
+    </div>
+
+    <div class="foot-panel2">
+
+        <ul>
+            <p>Get to Know Us</p>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Us</a>
+            <a>Investor Relations</a>
+            <a>Devices</a>
+            <a>Science</a>
+        </ul>
+
+        <ul>
+            <p>Make Money with Us</p>
+            <a>Sell Products</a>
+            <a>Business Account</a>
+            <a>Sell Apps</a>
+            <a>Become an Affiliate</a>
+            <a>Advertise Products</a>
+            <a>Self Publish</a>
+        </ul>
+
+        <ul>
+            <p>Payment Products</p>
+            <a>Business Card</a>
+            <a>Shop with Points</a>
+            <a>Reload Balance</a>
+            <a>Currency Converter</a>
+        </ul>
+
+        <ul>
+            <p>Let Us Help You</p>
+            <a>Your Account</a>
+            <a>Your Orders</a>
+            <a>Shipping Rates</a>
+            <a>Returns</a>
+            <a>Help</a>
+        </ul>
+
+    </div>
+
+    <div class="foot-panel3">
+        E-Commerce_Website
+    </div>
+
+    <div class="foot-panel4">
+
+        <div class="pages">
+            <a>Conditions of Use</a>
+            <a>Privacy Notice</a>
+            <a>Ads Privacy Choices</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 E-Commerce_Website. All Rights Reserved
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
